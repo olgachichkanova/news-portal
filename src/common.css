@@ -1,0 +1,40 @@
+@import url("https://fonts.cdnfonts.com/css/roboto");
+@import url("https://fonts.cdnfonts.com/css/playfair-display");
+
+:root {
+  --title-color: rgba(0, 0, 0, 0.8);
+  --accent-color: #ff5533;
+  --text-color: rgba(0, 0, 0, 0.6);
+  --text-secondary-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}

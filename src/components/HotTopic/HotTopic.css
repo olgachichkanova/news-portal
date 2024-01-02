@@ -1,0 +1,44 @@
+.article-title {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+.wrapper {
+  display: flex;
+}
+.article-image {
+  width: 70%;
+  max-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.article-text {
+  font-size: 18px;
+}
+
+.article-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  padding: 0 24px;
+}
+.article-data {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 24px;
+}
+.date {
+  margin-right: 32px;
+}
+
+.date,
+.source {
+  color: var(--text-secondary-color);
+}
