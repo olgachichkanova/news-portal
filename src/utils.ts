@@ -1,4 +1,18 @@
-export const getNews = (type: string) => {
+export const getNews = (type: string, categories: string) => {
+  const params: Params = {
+    api_token: "akN2tXzLDH04GCMhETGeDz7GICQIQKU8Gm8JWUfA",
+    categories,
+    search: "",
+    limit: "3",
+    language: "en",
+  };
+
+  const query = Object.keys(params)
+    .map(function (k) {
+      return esc(k) + "=" + esc(params[k]);
+    })
+    .join("&");
+
   return fetch(url + type + "?" + query, requestOptions)
     .then((response) => response.json())
     .then((result) => result)
@@ -7,12 +21,12 @@ export const getNews = (type: string) => {
       throw error;
     });
 };
+
 const requestOptions = {
   method: "GET",
 };
 
 const url = "https://api.thenewsapi.com/v1/news/";
-
 interface Params {
   api_token: string;
   categories: string;
@@ -23,18 +37,13 @@ interface Params {
 
 const params: Params = {
   api_token: "akN2tXzLDH04GCMhETGeDz7GICQIQKU8Gm8JWUfA",
-  categories: "business,tech, sport",
+  categories: "business, tech, sport, food, entertaiment, science",
   search: "",
-  limit: "50",
+  limit: "3",
   language: "en",
 };
 
 const esc = encodeURIComponent;
-const query = Object.keys(params)
-  .map(function (k) {
-    return esc(k) + "=" + esc(params[k]);
-  })
-  .join("&");
 
 export const beautifyDate = (date: string): string => {
   return new Date(date).toLocaleDateString("en-US", {

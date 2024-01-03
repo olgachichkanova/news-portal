@@ -7,8 +7,8 @@
   display: flex;
 }
 .article-image {
-  width: 70%;
-  max-height: 450px;
+  width: 60%;
+  max-height: 350px;
   position: relative;
   overflow: hidden;
 }
@@ -24,14 +24,12 @@ img {
 .article-details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
+
+  width: 40%;
   padding: 0 24px;
 }
 .article-data {
   display: flex;
-  justify-content: space-between;
-
   margin-top: 24px;
 }
 .date {
