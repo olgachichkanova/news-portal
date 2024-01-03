@@ -1,2 +1,2 @@
 News Portal
-Add description here
+Visit the portal  https://olgachichkanova.github.io/news-portal/
